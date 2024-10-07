@@ -14,15 +14,15 @@ const Homepage = () => {
       animate={{ y: "0%" }}
       transition={{ duration: 0.6 }}
     >
-      <div className="flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 gap-12">
+      <div className="h-full flex flex-col justify-center items-center lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 gap-12 ">
         {/* IMAGE CONTAINER */}
-        <div className="lg:h-full lg:w-1/2 relative flex items-center justify-center">
+        <div className="w-full h-full lg:w-1/2 relative flex items-center justify-center sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
           <Image
             src="/pictures/yiroma1080.webp"
             alt="image d'accueil"
-            width={250}
-            height={250}
-            // fill
+            // width={250}
+            // height={250}
+            fill
             className="object-contain"
           />
         </div>
@@ -45,7 +45,7 @@ const Homepage = () => {
           </p>
 
           {/* BUTTONS */}
-          <div className="w-full flex gap-4">
+          <div className="w-full flex gap-4 pb-8 md:pb-12 ">
             <DownloadCv />
 
             <ContactMe />
