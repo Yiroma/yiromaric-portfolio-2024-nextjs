@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 import DownloadCv from "@/components/downloadCv";
+import ContactMe from "@/components/contactMe";
 
 const Homepage = () => {
   return (
@@ -13,15 +14,15 @@ const Homepage = () => {
       animate={{ y: "0%" }}
       transition={{ duration: 0.6 }}
     >
-      <div className="h-full overflow-auto flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 gap-12">
+      <div className="flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 gap-12">
         {/* IMAGE CONTAINER */}
-        <div className="min-h-[70%] lg:h-full lg:w-1/2 relative flex items-center justify-center">
+        <div className="lg:h-full lg:w-1/2 relative flex items-center justify-center">
           <Image
             src="/pictures/yiroma1080.webp"
             alt="image d'accueil"
-            // width={250}
-            // height={250}
-            fill
+            width={250}
+            height={250}
+            // fill
             className="object-contain"
           />
         </div>
@@ -47,7 +48,7 @@ const Homepage = () => {
           <div className="w-full flex gap-4">
             <DownloadCv />
 
-            <button className="p-4 rounded-lg ring-1 ring-black">Contactez-moi</button>
+            <ContactMe />
           </div>
         </div>
       </div>
