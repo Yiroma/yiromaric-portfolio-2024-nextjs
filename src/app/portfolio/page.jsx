@@ -1,42 +1,48 @@
 "use client";
 
+import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+
 import Image from "next/image";
 import Link from "next/link";
-import { useRef } from "react";
+
+import LoireValleyServices from "../../../public/pictures/loire-valley-services.webp";
+import Devmx from "../../../public/pictures/devMX-le-blog.webp";
+import EmmausConnect from "../../../public/pictures/emmaus-connect.webp";
+import TodoList from "../../../public/pictures/TodoList.webp";
 
 const items = [
   {
     id: 1,
-    color: "from-red-300 to-blue-300",
-    title: "React Commerce",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "https://images.pexels.com/photos/18073372/pexels-photo-18073372/free-photo-of-young-man-sitting-in-a-car-on-a-night-street.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    link: "https://lama.dev",
+    color: "from-stone-950 to-stone-600",
+    title: "Taxi Loire Valley Services",
+    desc: "Conception d'un site One Page pour un service de taxi dans la région Orléanaise, incluant la création complète du logo, de la charte graphique, et du site en vanilla JS. Ce projet vise à offrir une présentation élégante et fluide des services, tout en assurant une expérience utilisateur optimale.",
+    img: LoireValleyServices,
+    link: "https://taxiloirevalleyservices.com",
   },
   {
     id: 2,
-    color: "from-blue-300 to-violet-300",
-    title: "Next.js Medium Blog",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    link: "https://lama.dev",
+    color: "from-stone-600 to-stone-900",
+    title: "DevMX, le blog",
+    desc: "Création du blog privé 'DevMX' avec React, conçu pour un groupe de développeurs du même nom. Ce projet m'a permis de valider mon titre de développeur web et web mobile. J'ai réalisé l'intégralité du site, en passant par la conception du logo et l'élaboration de la charte graphique, pour offrir une plateforme dédiée à l'échange et au partage entre développeurs.",
+    img: Devmx,
+    link: "https://github.com/Yiroma/Blog-DevMX",
   },
   {
     id: 3,
-    color: "from-violet-300 to-purple-300",
-    title: "Vanilla Book App",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "https://images.pexels.com/photos/6894528/pexels-photo-6894528.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    link: "https://lama.dev",
+    color: "from-stone-900 to-stone-600",
+    title: "Emmaüs Connect",
+    desc: "Développement d'une application pour Emmaüs Connect permettant l'enregistrement et l'évaluation de la reprise de smartphones, avec un système d'authentification et une interface dédiée aux administrateurs. Création de l'interface graphique libre et respect des critères clients pour les fonctionnalités. Ce projet a été réalisé lors d'un hackathon intense de 48 heures.",
+    img: EmmausConnect,
+    link: "https://github.com/Yiroma/Hackathon2-cHackahuete",
   },
   {
     id: 4,
-    color: "from-purple-300 to-red-300",
-    title: "Spotify Music App",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "https://images.pexels.com/photos/18540208/pexels-photo-18540208/free-photo-of-wood-landscape-water-hill.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    link: "https://lama.dev",
+    color: "from-stone-600 to-stone-900",
+    title: "TodoList",
+    desc: "Un classique dans la création d'un projet full-stack, la réalisation d'une todo list éditable simple et esthétique.",
+    img: TodoList,
+    link: "https://github.com/Yiroma/Check_4_ToDoList",
   },
 ];
 
@@ -56,11 +62,11 @@ const PortfolioPage = () => {
     >
       <div className="h-[600vh] relative" ref={ref}>
         <h1 className="h-[calc(100vh-6rem)] flex items-center justify-center text-8xl text-center">
-          my Works
+          Mes derniers projets
         </h1>
         <div className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
           <motion.div style={{ x }} className="flex">
-            <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-r from-purple-300 to-red-300" />
+            <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-r from-sky-200 to-stone-950" />
 
             {items.map((item) => (
               <div
@@ -77,7 +83,7 @@ const PortfolioPage = () => {
                   <p className="w-80 md:w-96 lg:w-[500px] lg:text-lg xl:w-[600px]">{item.desc}</p>
                   <Link href={item.link} className="w-full flex justify-end">
                     <button className="p-2 text-sm md:p-4 md:text-md lg:p-8 lg:text-lg bg-white text-gray-600 font-semibold m-4 rounded">
-                      See more
+                      Découvrir
                     </button>
                   </Link>
                 </div>
@@ -87,7 +93,7 @@ const PortfolioPage = () => {
         </div>
       </div>
       <div className="h-screen flex flex-col gap-16 items-center justify-center text-center">
-        <h2 className="text-8xl">Do you have a project ?</h2>
+        <h2 className="text-8xl">Travaillons ensemble</h2>
         <div className="relative">
           <motion.svg
             animate={{ rotate: 360 }}
@@ -102,8 +108,8 @@ const PortfolioPage = () => {
               />
             </defs>
             <text fill="#000">
-              <textPath xlinkHref="#circlePath" className="text-xl">
-                Front-end Developer and UI Designer
+              <textPath xlinkHref="#circlePath" className="text-xl text-center">
+                Développeur Web --- Web Designer ------
               </textPath>
             </text>
           </motion.svg>
@@ -111,7 +117,7 @@ const PortfolioPage = () => {
             href="/contact"
             className="w-16 h-16 md:w-28 md:h-28 absolute top-0 right-0 bottom-0 left-0 m-auto rounded-full bg-black text-white text-sm flex items-center justify-center"
           >
-            Contactez-nous
+            Contactez-moi
           </Link>
         </div>
       </div>

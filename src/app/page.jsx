@@ -19,9 +19,7 @@ const Homepage = () => {
         <div className="w-full h-full lg:w-1/2 relative flex items-center justify-center sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
           <Image
             src="/pictures/yiroma1080.webp"
-            alt="image d'accueil"
-            // width={250}
-            // height={250}
+            alt="photo de Romaric YI, développeur web, next.js, react.js, tailwind, MySQL"
             fill
             className="object-contain"
           />

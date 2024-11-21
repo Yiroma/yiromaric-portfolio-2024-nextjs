@@ -1,11 +1,13 @@
 "use client";
 
 import { useState, useRef } from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import ContactsBtn from "@/components/contactsBtn";
 
 const ContactPage = () => {
-  const sayHello = "Say Hello";
+  const sayHello = "Bonjour";
 
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
@@ -71,9 +73,9 @@ const ContactPage = () => {
       animate={{ y: "0%" }}
       transition={{ duration: 0.6 }}
     >
-      <div className="h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
-        {/* TEXT CONTAINER */}
-        <div className="h-1/2 lg:h-full lg:w-1/2 flex items-center justify-center text-6xl">
+      <div className="min-h-[calc(100vh-6rem)] flex flex-col items-center lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
+        {/* CONTACT BTN CONTAINER */}
+        <div className="lg:w-1/2 flex flex-col lg:h-full items-center justify-center gap-8 text-4xl lg:text-6xl mt-12 mb-12">
           <div>
             {sayHello.split("").map((letter, index) => (
               <motion.span
@@ -87,28 +89,32 @@ const ContactPage = () => {
             ))}
             😊
           </div>
+          <p className="text-xl">Discutons ensemble</p>
+          <ContactsBtn />
         </div>
         {/* FORM CONTAINER */}
         <form
           ref={form}
           onSubmit={sendEmail}
-          className="h-1/2 lg:h-full lg:w-1/2 bg-red-50 rounded-xl text-xl flex flex-col gap-8 justify-center p-24"
+          className="lg:h-full lg:w-1/2 bg-sky-100 rounded-xl text-xl flex flex-col gap-8 justify-center p-8 sm:p-10 md:p-14 lg:p-18 xl:p-24"
         >
-          <span>Chère Yiroma,</span>
+          <span>Bonjour Romaric,</span>
           <textarea
             rows={6}
             name="user_message"
+            placeholder="Ecrivez votre texte ici"
             value={formData.user_message}
             onChange={handleInputChange}
-            className="bg-white bg-opacity-40 rounded border-b-2 border-b-black outline-none resize-none"
+            className="p-2 bg-white bg-opacity-40 rounded border-b-2 border-b-black outline-none resize-none"
           />
-          <span>My mail address is:</span>
+          <span>Votre adresse mail:</span>
           <input
             type="email"
             name="user_email"
+            placeholder="votremail@exemple.com"
             value={formData.user_email}
             onChange={handleInputChange}
-            className="bg-white bg-opacity-40 rounded border-b-2 border-b-black outline-none"
+            className="p-2 bg-white bg-opacity-40 rounded border-b-2 border-b-black outline-none"
           />
 
           <label>
@@ -118,10 +124,13 @@ const ContactPage = () => {
               checked={formData.acceptTerms}
               onChange={handleInputChange}
             />{" "}
-            {`J'accepte les mentions légales`}
+            {`J'accepte les `}
+            <Link href="/mentions-légales" className="font-medium text-sky-700 underline">
+              {`conditions d'utilisations`}
+            </Link>
           </label>
           <button type="submit" className="bg-purple-200 rounded font-semibold text-gray-600 p-4">
-            Send
+            Envoyer
           </button>
           {success && (
             <span className="text-green-600 font-semibold">Le message est bien envoyé !</span>
