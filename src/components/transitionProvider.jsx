@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 
 import Navbar from "./navbar";
+import Footer from "./footer";
 
 const TransitionProvider = ({ children }) => {
   const pathName = usePathname();
@@ -35,6 +36,9 @@ const TransitionProvider = ({ children }) => {
           <Navbar />
         </nav>
         <main className="min-h-[calc(100vh-6rem)]">{children}</main>
+        <footer>
+          <Footer />
+        </footer>
       </div>
     </AnimatePresence>
   );

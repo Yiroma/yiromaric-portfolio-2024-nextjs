@@ -18,30 +18,16 @@ const socialLinks = [
   {
     id: 1,
     title: "GitHub",
-    url: "/",
+    url: "https://github.com/Yiroma",
     img: "/icons/github.svg",
     alt: "Lien vers GitHub",
   },
   {
     id: 2,
     title: "LinkedIn",
-    url: "/",
+    url: "https://www.linkedin.com/in/yiromaric/",
     img: "/icons/linkedin.svg",
     alt: "Lien vers LinkedIn",
-  },
-  {
-    id: 3,
-    title: "Facebook",
-    url: "/",
-    img: "/icons/facebook.svg",
-    alt: "Lien vers Facebook",
-  },
-  {
-    id: 4,
-    title: "Instagram",
-    url: "/",
-    img: "/icons/instagram.svg",
-    alt: "Lien vers Instagram",
   },
 ];
 
@@ -132,7 +118,7 @@ const Navbar = () => {
       {/* SOCIAL LINK */}
       <div className="hidden md:flex justify-end gap-4 w-1/3">
         {socialLinks.map((social) => (
-          <Link href={social.url} key={social.id}>
+          <Link href={social.url} key={social.id} target="_blank">
             <Image src={social.img} alt={social.alt} width={26} height={26} />
           </Link>
         ))}

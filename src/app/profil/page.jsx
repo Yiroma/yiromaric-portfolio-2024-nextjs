@@ -66,7 +66,7 @@ const AboutPage = () => {
       transition={{ duration: 0.6 }}
     >
       {/* CONTAINER */}
-      <div className="h-full overflow-scroll lg:flex" ref={containerRef}>
+      <div className="h-[calc(100vh-6rem)] overflow-scroll lg:flex" ref={containerRef}>
         {/* TEXT CONTAINER */}
         <div className="p-4 sm:p-8 md:p-12 lg:p-16 xl:p-32 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-2/3">
           {/* BIOGRAPHY CONTAINER */}

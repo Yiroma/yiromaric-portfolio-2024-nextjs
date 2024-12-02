@@ -125,7 +125,7 @@ const ContactPage = () => {
               onChange={handleInputChange}
             />{" "}
             {`J'accepte les `}
-            <Link href="/mentions-légales" className="font-medium text-sky-700 underline">
+            <Link href="/mentions-legales" className="font-medium text-sky-700 underline">
               {`conditions d'utilisations`}
             </Link>
           </label>

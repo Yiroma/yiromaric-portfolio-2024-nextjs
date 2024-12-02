@@ -14,7 +14,7 @@ const Homepage = () => {
       animate={{ y: "0%" }}
       transition={{ duration: 0.6 }}
     >
-      <div className="h-full flex flex-col justify-center items-center lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 gap-12 ">
+      <div className="h-[calc(100vh-6rem)] flex flex-col justify-center items-center lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48 gap-12 ">
         {/* IMAGE CONTAINER */}
         <div className="w-full h-full lg:w-1/2 relative flex items-center justify-center sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
           <Image
