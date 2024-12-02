@@ -11,17 +11,17 @@ const Footer = () => {
       <div className="w-1/3">
         <Link href="/">
           <Image
-            src="/public/logos/logo-white.svg"
+            src="/logos/logo-white.svg"
             alt="Logo Yi Romaric, développeur web Next.js, React.js, Tailwind, MySQL"
             width={64}
             height={64}
           ></Image>
         </Link>
       </div>
-      <Link href="/legals" className="w-1/3 text-center text-sm">
+      <Link href="/legals" className="w-1/3 text-center text-xs">
         Mentions légales
       </Link>
-      <span className="w-1/3 text-right text-sm">
+      <span className="w-1/3 text-right text-xs">
         Yi Romaric © {currentYear} tous droits réservés
       </span>
     </div>
