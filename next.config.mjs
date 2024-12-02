@@ -5,6 +5,7 @@ const nextConfig = {
     loader: "custom",
     loaderFile: "./loader.js",
   },
+  trailingSlash: true,
 };
 
 export default nextConfig;
