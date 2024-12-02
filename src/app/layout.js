@@ -5,6 +5,8 @@ import TransitionProvider from "@/components/transitionProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
+  metadataBase: new URL("https://yiromaric.fr"),
+
   title: "Yi Romaric - Développeur Web | Next.js | React.js | Tailwind | MySQL",
 
   description:
