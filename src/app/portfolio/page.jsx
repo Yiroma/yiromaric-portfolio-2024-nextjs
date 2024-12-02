@@ -88,7 +88,7 @@ const PortfolioPage = () => {
         </div>
       </div>
       <div className="h-screen flex flex-col gap-16 items-center justify-center text-center">
-        <h2 className="text-8xl">Travaillons ensemble</h2>
+        <h2 className="text-4xl  md:text-6xl lg:text-8xl">Travaillons ensemble</h2>
         <div className="relative">
           <motion.svg
             animate={{ rotate: 360 }}

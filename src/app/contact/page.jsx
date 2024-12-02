@@ -73,7 +73,7 @@ const ContactPage = () => {
       animate={{ y: "0%" }}
       transition={{ duration: 0.6 }}
     >
-      <div className="min-h-[calc(100vh-6rem)] flex flex-col items-center lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
+      <div className="min-h-[calc(100svh-6rem)] flex flex-col items-center lg:flex-row px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48">
         {/* CONTACT BTN CONTAINER */}
         <div className="lg:w-1/2 flex flex-col lg:h-full items-center justify-center gap-8 text-4xl lg:text-6xl mt-12 mb-12">
           <div>

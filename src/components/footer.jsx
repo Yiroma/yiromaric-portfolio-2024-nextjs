@@ -1,9 +1,7 @@
 "use client";
 
-import Link from "next/link";
-
-import LogoWhite from "../../public/logos/logo-white.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -13,17 +11,19 @@ const Footer = () => {
       <div className="w-1/3">
         <Link href="/">
           <Image
-            src={LogoWhite}
+            src="/public/logos/logo-white.svg"
             alt="Logo Yi Romaric, développeur web Next.js, React.js, Tailwind, MySQL"
             width={64}
             height={64}
           ></Image>
         </Link>
       </div>
-      <Link href="/legals" className="w-1/3 text-center">
+      <Link href="/legals" className="w-1/3 text-center text-sm">
         Mentions légales
       </Link>
-      <span className="w-1/3 text-right">Yi Romaric © {currentYear} tous droits réservés</span>
+      <span className="w-1/3 text-right text-sm">
+        Yi Romaric © {currentYear} tous droits réservés
+      </span>
     </div>
   );
 };

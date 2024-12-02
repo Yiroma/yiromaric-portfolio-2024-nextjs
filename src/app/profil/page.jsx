@@ -1,11 +1,11 @@
 "use client";
 
-import { useRef } from "react";
 import { motion, useInView, useScroll } from "framer-motion";
+import { useRef } from "react";
 
-import { BiographySign, ScrollIcon } from "@/components/SvgIcons";
 import Brain from "@/components/brain";
 import DownloadCv from "@/components/downloadCv";
+import { BiographySign, ScrollIcon } from "@/components/SvgIcons";
 
 const skills = [
   "Next.js",
@@ -123,7 +123,7 @@ dynamiques."`}
               {skills.map((skill, index) => (
                 <div
                   key={index}
-                  className="rounded p-2 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black"
+                  className="rounded p-4 text-sm cursor-pointer bg-black text-white hover:bg-white hover:text-black"
                 >
                   {skill}
                 </div>
