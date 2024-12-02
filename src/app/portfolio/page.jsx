@@ -6,18 +6,13 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-import LoireValleyServices from "../../../public/pictures/loire-valley-services.webp";
-import Devmx from "../../../public/pictures/devMX-le-blog.webp";
-import EmmausConnect from "../../../public/pictures/emmaus-connect.webp";
-import TodoList from "../../../public/pictures/TodoList.webp";
-
 const items = [
   {
     id: 1,
     color: "from-stone-950 to-stone-600",
     title: "Taxi Loire Valley Services",
     desc: "Conception d'un site One Page pour un service de taxi dans la région Orléanaise, incluant la création complète du logo, de la charte graphique, et du site en vanilla JS. Ce projet vise à offrir une présentation élégante et fluide des services, tout en assurant une expérience utilisateur optimale.",
-    img: LoireValleyServices,
+    img: "/pictures/loire-valley-services.webp",
     link: "https://taxiloirevalleyservices.com",
   },
   {
@@ -25,7 +20,7 @@ const items = [
     color: "from-stone-600 to-stone-900",
     title: "DevMX, le blog",
     desc: "Création du blog privé 'DevMX' avec React, conçu pour un groupe de développeurs du même nom. Ce projet m'a permis de valider mon titre de développeur web et web mobile. J'ai réalisé l'intégralité du site, en passant par la conception du logo et l'élaboration de la charte graphique, pour offrir une plateforme dédiée à l'échange et au partage entre développeurs.",
-    img: Devmx,
+    img: "/pictures/devMX-le-blog.webp",
     link: "https://github.com/Yiroma/Blog-DevMX",
   },
   {
@@ -33,7 +28,7 @@ const items = [
     color: "from-stone-900 to-stone-600",
     title: "Emmaüs Connect",
     desc: "Développement d'une application pour Emmaüs Connect permettant l'enregistrement et l'évaluation de la reprise de smartphones, avec un système d'authentification et une interface dédiée aux administrateurs. Création de l'interface graphique libre et respect des critères clients pour les fonctionnalités. Ce projet a été réalisé lors d'un hackathon intense de 48 heures.",
-    img: EmmausConnect,
+    img: "/pictures/emmaus-connect.webp",
     link: "https://github.com/Yiroma/Hackathon2-cHackahuete",
   },
   {
@@ -41,7 +36,7 @@ const items = [
     color: "from-stone-600 to-stone-900",
     title: "TodoList",
     desc: "Un classique dans la création d'un projet full-stack, la réalisation d'une todo list éditable simple et esthétique.",
-    img: TodoList,
+    img: "/pictures/TodoList.webp",
     link: "https://github.com/Yiroma/Check_4_ToDoList",
   },
 ];
