@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    ports:
+      - "80:80"
+    restart: unless-stopped
+    container_name: portfolio
+
+    # Optionnel: pour persister les logs nginx
+    volumes:
+      - ./logs:/var/log/nginx
+
+    # Variables d'environnement (si besoin)
+    environment:
+      - NODE_ENV=production
+
+    # Limites de ressources pour votre mini-serveur
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+          cpus: "0.5"
+        reservations:
+          memory: 128M
+          cpus: "0.25"
