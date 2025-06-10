@@ -5,7 +5,7 @@ import { useRef } from "react";
 
 import Brain from "@/components/brain";
 import DownloadCv from "@/components/downloadCv";
-import { BiographySign, ScrollIcon } from "@/components/SvgIcons";
+import { BiographySign, ScrollIcon } from "@/components/svgIcons";
 
 const skills = [
   "Next.js",

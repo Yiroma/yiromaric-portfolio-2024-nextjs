@@ -6,8 +6,8 @@ WORKDIR /app
 # Copier les fichiers de package pour le cache des couches Docker
 COPY package*.json ./
 
-# Installer les dépendances
-RUN npm ci --only=production
+# Installer TOUTES les dépendances (y compris devDependencies pour le build)
+RUN npm ci
 
 # Copier le code source
 COPY . .
@@ -22,6 +22,7 @@ FROM nginx:alpine AS production
 COPY nginx.conf /etc/nginx/nginx.conf
 
 # Copier les fichiers statiques depuis l'étape de build
+# Pour Next.js avec export statique, les fichiers sont dans /app/out
 COPY --from=builder /app/out /usr/share/nginx/html
 
 # Exposer le port 80
